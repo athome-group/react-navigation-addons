@@ -50,7 +50,9 @@ export default function enhanceScreen<T: *>(
     }
 
     componentWillMount() {
-      this.props.navigation.setParams({ [COUNT_PARAM]: this._updateCount });
+      // Commenting this line because of this issue:
+      // https://github.com/satya164/react-navigation-addons/issues/25 
+      // this.props.navigation.setParams({ [COUNT_PARAM]: this._updateCount });
     }
 
     componentDidMount() {
